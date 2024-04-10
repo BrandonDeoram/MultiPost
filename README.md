@@ -2,7 +2,7 @@
 
 Welcome to our Social Media Analytics Platform! This project allows users to gather analytics from Instagram Reels, YouTube Shorts, and schedule or post across Reels, Shorts, and Twitter simultaneously.
 
-# YouTube Playlist
+## YouTube Playlist
 https://www.youtube.com/watch?v=vJGACUlJBT4&list=PLJBXdzgc_el224xKA_amRSjFew8sKeNkL
 
 ## Features
