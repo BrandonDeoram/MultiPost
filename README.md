@@ -7,7 +7,7 @@ Welcome to our Social Media Analytics Platform! This project allows users to gat
 - **Analytics Dashboard**: View detailed analytics of your Instagram Reels and YouTube Shorts.
 - **Cross-Platform Posting**: Post content across Instagram Reels, YouTube Shorts, and Twitter all at once.
 - **Scheduling**: Schedule your posts for a specific time to optimize engagement.
-- **Tech Stack**: Utilizes Next.js, Django, TypeScript, Tailwind CSS, PostgreSQL, AWS S3, Instagram API, YouTube Data API, and Selenium.
+- **Tech Stack**: Utilizes Next.js, Django, TypeScript, Tailwind CSS, PostgreSQL, AWS S3, YouTube Data API, Meta Graph API, and Selenium.
 
 ## Installation
 
