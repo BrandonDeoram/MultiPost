@@ -36,3 +36,6 @@ yarn-error.log*
 next-env.d.ts
 
 .env
+.secrets.py
+.client_secrets.json
+.client_secrets2.json

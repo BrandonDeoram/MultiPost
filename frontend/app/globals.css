@@ -104,3 +104,24 @@
     padding: 0;
   }
 }
+/* For Webkit browsers (Chrome/Safari) */
+::-webkit-scrollbar {
+  width: 10px; /* width of the scrollbar */
+  border-radius: 10px;
+}
+
+
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background:rgb(47, 54, 66);
+  border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(36, 42, 53);
+}

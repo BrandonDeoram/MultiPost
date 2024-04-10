@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
 import { useSession } from "next-auth/react";
 interface NavItem {
   label: string;
@@ -9,16 +10,15 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: "Pricing", link: "/pricing" },
-  { label: "Sign In", link: "/sign-in" },
-  { label: "Get Started", link: "/get-started" },
+  { label: "Upload", link: "/upload" },
+  { label: "Dashboard", link: "/dashboard" },
 ];
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const session = useSession();
-  
-  const isAuth =false;
+
+  const isAuth = false;
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
     >
       <div className="container mx-auto flex justify-between items-center">
         <Link href={"/"}>
-          <div className="text-white font-bold text-xl  p-[.32rem] rounded-lg cursor-pointer hover:opacity-50 transition ease-linear">
+          <div className="text-white font-bold text-xl rounded-lg cursor-pointer hover:opacity-50 transition ease-linear">
             MultiPost
           </div>
         </Link>
@@ -61,33 +61,24 @@ const Navbar: React.FC = () => {
             isOpen ? "block" : "hidden"
           } lg:items-center space-x-4 flex-row items-center `}
         >
-          {isAuth ? (
-            <>
-              <li key="pricingkey123">
-                <a
-                  href="/pricing"
-                  className="text-white hover:opacity-50 transition ease-linear"
-                >
-                  Pricing
-                </a>
-              </li>
-            </>
-          ) : (
-            navItems.map((item, index) => (
-              <li key={index}>
-                <a
-                  href={item.link}
-                  className={`text-white ${
-                    index === navItems.length - 1
-                      ? " p-2 rounded-lg hover:opacity-50 hover:text-white transition ease-linear font-medium"
-                      : "hover:opacity-50 transition ease-linear"
-                  }`}
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))
-          )}
+          {navItems.map((item, index) => (
+            <li key={index}>
+              <a
+                href={item.link}
+                className={`text-white ${
+                  index === navItems.length - 1
+                    ? " p-2 rounded-lg hover:opacity-50 hover:text-white transition ease-linear font-medium"
+                    : "hover:opacity-50 transition ease-linear"
+                }`}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+          <Avatar>
+            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
         </ul>
       </div>
     </nav>
